@@ -27,7 +27,6 @@ public:
          
          for(int j=0;j<wall[i].size()-1;j++)
          {
-           cout<<wall[i][j]<<" ";  
             mp[wall[i][j]]++;
          }
           
