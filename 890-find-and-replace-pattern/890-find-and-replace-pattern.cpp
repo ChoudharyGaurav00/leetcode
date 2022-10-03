@@ -1,13 +1,6 @@
 class Solution {
 public:
     
-    template<typename T>
-void removeDuplicates(std::vector<T>& vec)
-{
-    std::sort(vec.begin(), vec.end());
-    vec.erase(std::unique(vec.begin(), vec.end()), vec.end());
-}
-    
     vector<string> findAndReplacePattern(vector<string>& words, string pattern) {
         vector<string> ans;
         
@@ -19,7 +12,6 @@ void removeDuplicates(std::vector<T>& vec)
             if(mp.find(pattern[i])!=mp.end())
             {
                 newp.push_back(to_string( mp[pattern[i]]));
-               // pattern[i]= to_string( mp[pattern[i]])[0];
             }
             else
             {
@@ -28,14 +20,8 @@ void removeDuplicates(std::vector<T>& vec)
                 
                 newp.push_back(to_string( mp[pattern[i]]));
                 
-                //..pattern[i]=to_string(mp[pattern[i]])[0];
             }
         }
-        
-//         for(auto x:newp)
-//         {
-//             cout<<x<<" ";
-//         }
         
         for(auto x:words)
         {
